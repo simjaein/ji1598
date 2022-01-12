@@ -98,7 +98,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      4 min read
     
 </span></p>
 
@@ -338,7 +338,60 @@ $R^2 = r^2 (r :sample correlation)\qquad 표본상관계수$     (<code>단순�
 <h2 id="&#54924;&#44480;&#44228;&#49688;&#50640;-&#45824;&#54620;-&#52628;&#47200;">&#54924;&#44480;&#44228;&#49688;&#50640; &#45824;&#54620; &#52628;&#47200;<a class="anchor-link" href="#&#54924;&#44480;&#44228;&#49688;&#50640;-&#45824;&#54620;-&#52628;&#47200;"> </a></h2><ul>
 <li>모회귀계수(기울기) $\beta_1$에 대한 추론   <ul>
 <li>가설검정 : $H_0:\beta_1=\beta_1^0$   </li>
-<li>검정통계량 : $T=\frac{\hat{\beta_1}-{\beta_1^0}}{\hat{\sigma}/\sqrt{S_{xx}}}\sim_{H_0}t(n-2)$, 관측값:t</li>
+<li>검정통계량 : $T=\frac{\hat{\beta_1}-{\beta_1^0}}{\hat{\sigma}/\sqrt{S_{xx}}}\sim_{H_0}t(n-2)$, 관측값 : t</li>
+</ul>
+</li>
+</ul>
+<hr />
+<p>$\qquad\qquad\quad$대립가설$\qquad\qquad\quad$유의확률 $\qquad\qquad\quad유의수준\alpha$ 기각역</p>
+<hr />
+<p>$\qquad\qquad H_1:\beta_1&gt;\beta_{1}^0\qquad\quad P(T\geq t)\qquad\qquad\quad t\geq t_{\alpha} (n-2)$
+$\qquad\qquad H_1:\beta_1&lt;\beta_{1}^0\qquad\quad P(T\leq t)\qquad\qquad\quad t\geq t_{\alpha} (n-2)$</p>
+<h2 id="$\qquad\qquad-H_1:\beta_1\neq\beta_{1}^0\qquad\quad-P(|T|\geq-|t|)\qquad\quad-|t|\geq-t_{\alpha/2}-(n-2)$">$\qquad\qquad H_1:\beta_1\neq\beta_{1}^0\qquad\quad P(|T|\geq |t|)\qquad\quad |t|\geq t_{\alpha/2} (n-2)$<a class="anchor-link" href="#$\qquad\qquad-H_1:\beta_1\neq\beta_{1}^0\qquad\quad-P(|T|\geq-|t|)\qquad\quad-|t|\geq-t_{\alpha/2}-(n-2)$"> </a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#54924;&#44480;&#44228;&#49688;&#50640;-&#45824;&#54620;-&#52628;&#47200;">&#54924;&#44480;&#44228;&#49688;&#50640; &#45824;&#54620; &#52628;&#47200;<a class="anchor-link" href="#&#54924;&#44480;&#44228;&#49688;&#50640;-&#45824;&#54620;-&#52628;&#47200;"> </a></h2><ul>
+<li>모회귀계수(절편) $\beta_0$에 대한 추론   <ul>
+<li>$\beta_0$의 최소제곱추정량 : $\hat{\beta_0}=\overline{Y}-\hat{\beta_1}\overline{x}$   </li>
+<li>추정값 : $\hat{\beta_0}$ = $\overline y-\hat{\beta_1}\overline x$   </li>
+<li>추정량 $\hat{\beta_0}$의 분포 : $\hat{\beta_0}\sim N\big(\beta_0,\sigma^2(\frac{1}{n}+\frac{\overline{x}^2}{S_{xx}})\big)$<br />
+$$\frac{\hat{\beta_0}-{\beta_0}}{_{s.e.}(\hat{\beta_0})}\sim t(n-2),\;_{s.e.}(\hat{\beta_0})=\hat{\sigma}\sqrt{\frac{1}{n}+\frac{\overline x^2}{S_{xx}}}$$   </li>
+<li>$\hat{\beta_0}$의 $100(1-\alpha)$% 신뢰구간 : $\hat{\beta_0}\pm t_{\alpha/2}(n-2)_{s.e.}(\hat{\beta_0})$</li>
+</ul>
+</li>
+</ul>
+<h2 id="&#54924;&#44480;&#44228;&#49688;&#50640;-&#45824;&#54620;-&#52628;&#47200;">&#54924;&#44480;&#44228;&#49688;&#50640; &#45824;&#54620; &#52628;&#47200;<a class="anchor-link" href="#&#54924;&#44480;&#44228;&#49688;&#50640;-&#45824;&#54620;-&#52628;&#47200;"> </a></h2><ul>
+<li>모회귀계수(기울기) $\beta_0$에 대한 추론   <ul>
+<li>가설검정 : $H_0:\beta_0=\beta_0^0$   </li>
+<li>검정통계량 : $T=\frac{\hat{\beta_0}-{\beta_0^0}}{_{s.e.}(\hat{\beta_0})}\sim_{H_0}t(n-2)$, 관측값:t</li>
+</ul>
+</li>
+</ul>
+<hr />
+<p>$\qquad\qquad\quad$대립가설$\qquad\qquad\quad$유의확률 $\qquad\qquad\quad유의수준\alpha$ 기각역</p>
+<hr />
+<p>$\qquad\qquad H_1:\beta_0&gt;\beta_{0}^0\qquad\quad P(T\geq t)\qquad\qquad\quad t\geq t_{\alpha} (n-2)$
+$\qquad\qquad H_1:\beta_0&lt;\beta_{0}^0\qquad\quad P(T\leq t)\qquad\qquad\quad t\geq t_{\alpha} (n-2)$</p>
+<h2 id="$\qquad\qquad-H_1:\beta_0\neq\beta_{0}^0\qquad\quad-P(|T|\geq-|t|)\qquad\quad-|t|\geq-t_{\alpha/2}-(n-2)$">$\qquad\qquad H_1:\beta_0\neq\beta_{0}^0\qquad\quad P(|T|\geq |t|)\qquad\quad |t|\geq t_{\alpha/2} (n-2)$<a class="anchor-link" href="#$\qquad\qquad-H_1:\beta_0\neq\beta_{0}^0\qquad\quad-P(|T|\geq-|t|)\qquad\quad-|t|\geq-t_{\alpha/2}-(n-2)$"> </a></h2><h2 id="&#54217;&#44512;&#48152;&#51025;&#50696;&#52769;">&#54217;&#44512;&#48152;&#51025;&#50696;&#52769;<a class="anchor-link" href="#&#54217;&#44512;&#48152;&#51025;&#50696;&#52769;"> </a></h2><ul>
+<li>$x=x_0$ 가 주어졌을 때 평균반응의 예측   <ul>
+<li>평균반응 (mean response) : $\mu_0 = E(Y|x_0) = \beta_0+\beta_1x_0$   </li>
+<li>평균반응 추정량 : $\hat{\mu_0} = \hat{\beta_0} + \hat{\beta_1}x_0$   </li>
+<li>$\hat{\mu_0}$ 의 분포 : $\hat{\mu_0}\sim N \big(\mu_0,(\frac{1}{n} + \frac{(x_0-\overline x)^2}{S_{xx}})\sigma^2\big)$<br />
+$$\frac{\hat{\mu_0}-\mu_0}{_{s.e.}(\hat{\mu_0})}\sim t(n-2),\; _{s.e.}(\hat{\mu_0}) = \hat{\sigma}\sqrt{\frac{1}{n}+\frac{(x_0-\overline x)^2}{S_{xx}}}$$   </li>
+<li>$\hat{\mu_0}$의 $100(1-\alpha)$% 신뢰구간 : $\hat{\mu_0}\pm t_{\alpha/2}(n-2)_{s.e.}(\hat{\mu_0})$</li>
+</ul>
+</li>
+</ul>
+<h2 id="&#50696;&#52769;">&#50696;&#52769;<a class="anchor-link" href="#&#50696;&#52769;"> </a></h2><ul>
+<li>$x=x_0$가 주어졌을 때 $y=y_0$ 예측   <ul>
+<li>$y_0 = \beta_0+\beta_1x_0+\epsilon_0$   </li>
+<li>예측값 : $\hat y_0 = \hat{\beta_0}+\hat{\beta_1}x_0$   </li>
+<li>$\hat y_0$ 의 분포 : $\hat y_0\sim N\big(\mu_0,(1+\frac{1}{n} + \frac{(x_0-\overline x)^2}{S_{xx}})\sigma^2\big)$<br />
+$$\frac{\hat{y_0}-y_0}{_{s.e.}(\hat{y_0})}\sim t(n-2),\; _{s.e.}(\hat{y_0}) = \hat{\sigma}\sqrt{1+\frac{1}{n}+\frac{(x_0-\overline x)^2}{S_{xx}}}$$   </li>
+<li>$\hat{y_0}$의 $100(1-\alpha)$% 신뢰구간 : $\hat{y_0}\pm t_{\alpha/2}(n-2)_{s.e.}(\hat{y_0})$</li>
 </ul>
 </li>
 </ul>
