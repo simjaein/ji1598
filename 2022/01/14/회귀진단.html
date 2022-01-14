@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Regression Diagnostic | jaeni</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Regression Diagnostic" />
+<meta name="author" content="심재인" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="회귀분석" />
+<meta property="og:description" content="회귀분석" />
+<link rel="canonical" href="https://simjaein.github.io/ji1598/2022/01/14/%ED%9A%8C%EA%B7%80%EC%A7%84%EB%8B%A8.html" />
+<meta property="og:url" content="https://simjaein.github.io/ji1598/2022/01/14/%ED%9A%8C%EA%B7%80%EC%A7%84%EB%8B%A8.html" />
+<meta property="og:site_name" content="jaeni" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-01-14T00:00:00-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Regression Diagnostic" />
+<script type="application/ld+json">
+{"url":"https://simjaein.github.io/ji1598/2022/01/14/%ED%9A%8C%EA%B7%80%EC%A7%84%EB%8B%A8.html","@type":"BlogPosting","headline":"Regression Diagnostic","dateModified":"2022-01-14T00:00:00-06:00","datePublished":"2022-01-14T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://simjaein.github.io/ji1598/2022/01/14/%ED%9A%8C%EA%B7%80%EC%A7%84%EB%8B%A8.html"},"author":{"@type":"Person","name":"심재인"},"description":"회귀분석","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/ji1598/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://simjaein.github.io/ji1598/feed.xml" title="jaeni" /><link rel="shortcut icon" type="image/x-icon" href="/ji1598/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css" integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js" integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js" integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha512-0doc9hKxR3PYwso42RD1p5ySZpzzuDiOwMrdCEh2WdJZCjcmFKc/wEnL+z8fBQrnHoiNWbo+3fiGkOYXBdQp4A==" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/ji1598/">jaeni</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/ji1598/about/">About Me</a><a class="page-link" href="/ji1598/search/">Search</a><a class="page-link" href="/ji1598/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Regression Diagnostic</h1><p class="page-description">회귀분석</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-01-14T00:00:00-06:00" itemprop="datePublished">
+        Jan 14, 2022
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">심재인</span></span>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/simjaein/ji1598/tree/master/_notebooks/2022-01-14-회귀진단.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/ji1598/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/simjaein/ji1598/master?filepath=_notebooks%2F2022-01-14-%ED%9A%8C%EA%B7%80%EC%A7%84%EB%8B%A8.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/ji1598/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/simjaein/ji1598/blob/master/_notebooks/2022-01-14-회귀진단.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/ji1598/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fsimjaein%2Fji1598%2Fblob%2Fmaster%2F_notebooks%2F2022-01-14-%ED%9A%8C%EA%B7%80%EC%A7%84%EB%8B%A8.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/ji1598/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2022-01-14-회귀진단.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#54924;&#44480;&#51652;&#45800;">&#54924;&#44480;&#51652;&#45800;<a class="anchor-link" href="#&#54924;&#44480;&#51652;&#45800;"> </a></h2><ul>
+<li>오차항의 가정 검토   </li>
+<li>적절한 모형의 선택   </li>
+<li>독립변수들간의 상관관계 검토   </li>
+<li>이상치(outlier) 확인</li>
+<li>영향을 크게 주는 측정값 (influential observation)<br />
+## Hat matrix</li>
+<li>잔차<br />
+$e=Y-\hat Y=Y-X\hat{\beta}$<br />
+$\qquad\qquad = Y-X(X^TX)^{-1}X^{T}Y = [I-X(X^TX)^{-1}X^T]Y$   <ul>
+<li>$E(e)=0$   </li>
+<li>$Var(e) = [I-X(X^TX)^{-1}X^T]\sigma^2$   </li>
+</ul>
+</li>
+<li>matrix   <ul>
+<li><code>Hat matrix</code> : $H = X(X^TX)^{-1}X^T, n\times n$ matrix<br />
+$h_{ij} = X_{i}^T(X^TX)^{-1}x_{j},$ for $i,j = 1,\dots,n,$<br />
+where $x_i = (1,x_{i1},x_{i2},\dots,x_{ip})$<br />
+$\Rightarrow E(e_i) = 0,\quad Var(e_i) = (1-h_{ii})\sigma^2$   <ul>
+<li>$tr(H) = p+1,\;0\leq h_{ii}&lt;1$   </li>
+<li>$p=1 : h_{ii} = \frac{1}{n}+\frac{(x_{i}-\overline x)^2}{S_{xx}}$   </li>
+<li>$p&gt;1 : h_{ii}=\frac{1}{n}+(x_{i1}-\overline x_1,\dots,x_{ip}-\overline x_p)S^{-1}$
+$\begin{pmatrix}
+x_{i1} - {\overline x_{1}} \\
+\vdots  \\
+x_{ip} - {\overline x_{p}}\\
+\end{pmatrix}$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="&#51092;&#52264;&#48516;&#49437;">&#51092;&#52264;&#48516;&#49437;<a class="anchor-link" href="#&#51092;&#52264;&#48516;&#49437;"> </a></h2><ul>
+<li>Model : $Y=X\beta+\epsilon,\epsilon_i\sim_{iid}N(0,\sigma^2)$<br />
+$\qquad y_i=\beta_0+\beta_1x_{i1}+\dots+\beta_px_{ip}+\epsilon_i$</li>
+<li>Assumption   <ul>
+<li>(linearity) $E(y|x_i,\dots,x_p) = \beta_0+\beta_1 x_1+\dots+\beta_p x_p$   </li>
+<li>(homogeneous variance) $Var(\epsilon_1) = \dots = Var(\epsilon_n) =\sigma^2$   </li>
+<li>(normality) $\epsilon_i,\sim N(0,\sigma^2)$   </li>
+<li>(independent) $\epsilon_1,\dots,\epsilon_n$ : independent</li>
+</ul>
+</li>
+</ul>
+<h2 id="Residual">Residual<a class="anchor-link" href="#Residual"> </a></h2><ul>
+<li>잔차(residual) : $\hat{e_i} = y_i-\hat{y_i}$   <ul>
+<li>잔차의 분산 : $Var(Y_i-\hat Y) = \sigma^2(1-h_{ii})$   </li>
+<li>스튜던트화 잔차 $\hat{e_{st,i}} = \frac{\hat{e}_i}{\hat{sd(\hat{e}_i)}} = \frac{y_i-\hat{y_i}}{\sqrt{MSE(1-h_{ii})}}$   </li>
+<li>잔차도(residual plot) : $(x_1,\hat{e_{st,i}}),\dots,(x_n,\hat{e_{st,n}})$ 의 산점도</li>
+</ul>
+</li>
+</ul>
+<h2 id="Residual-Anlaysis">Residual Anlaysis<a class="anchor-link" href="#Residual-Anlaysis"> </a></h2><ul>
+<li>잔차분석   <ul>
+<li>대략 0에 관하여 대칭적으로 나타나고$\qquad\qquad\qquad$ (선형성)   </li>
+<li>설명변수의 값에 따른 잔차의 산포가 크게 다르지 않고$\quad\;$ (등분산성)   </li>
+<li>점들이 특정한 형식을 가지고 나타남이 없으며$\qquad\qquad$ (독립성)   </li>
+<li>거의 모든 점이 $\pm$2(3)의 범위내에 나타나야한다$\qquad\quad$ (정규성)</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Outlier">Outlier<a class="anchor-link" href="#Outlier"> </a></h2><ul>
+<li>표준화잔차   <ul>
+<li>내적으로 스튜던트화된 잔차 (internally studentized residual)<br />
+$$r_i = \frac{e_i}{\hat{\sigma}\sqrt{1-h_{ii}}}$$   </li>
+<li>외적으로 스튜던트화된 잔차 (externally studentized residual)<br />
+$$r_i^* = \frac{e_i}{\hat{\sigma_{(i)}}\sqrt{1-h_{ii}}}$$<br />
+단, $\hat{\sigma_{(i)}} = \Big[(n-p-1)\hat{\sigma}^2-\frac{e_i^2}{1-h_{ii}}\Big] / (n-p-2)$</li>
+</ul>
+</li>
+</ul>
+<h2 id="Influence-Observation">Influence Observation<a class="anchor-link" href="#Influence-Observation"> </a></h2><ul>
+<li>영향점 : 회귀분석의 결과가 몇 개의 특정값에 의해 크게 영향을 받는 경우, 영향점이 있다고 말함   </li>
+<li><p>영향점을 검출하는 방법<br />
+(1) 행렬 $H$의 대각원소 :<br />
+ $\quad\hat Y = X(X^TX)^{-1}X^TY = HY$<br />
+$\quad\Rightarrow Var(\hat Y) = h_{ii}\sigma^2$<br />
+$\quad\Rightarrow h_{ii}\geq 2(p+1)/n$ : 영향점으로 판단<br />
+(2) DFFITS (Difference if Fits)<br />
+$$DFFITS(i) = \frac{\hat{y}_i-\hat{y}_i(i)}{\hat{\sigma}_{(i)}\sqrt{h_{ii}}}$$</p>
+<blockquote><p>$\hat{y}_j(i) :i$번쨰 데이터를 제외시키고 $n-1$개 데이터에서 얻은 예측값     &gt; $|DFFITS(i)|\geq 2\sqrt{\frac{p+1}{n-p-1}} \Rightarrow$ 영향점</p>
+</blockquote>
+<p>(3) Cook's Distance<br />
+$$C_i = \frac{\sum_{j=1}^n(\hat{y}_j - \hat{y}_j(i))^2}{(p+1)\hat{\sigma}^2}$$</p>
+<blockquote><p>$C_i = \frac{h_{ii}}{1-h_{ii}}\cdot\frac{r_{i}^2}{p+1}$<br />
+$C_i\geq F_{0.5}(p+1,n-p-1)$ 또는 $C_i\geq 1\Rightarrow$ 영향점</p>
+</blockquote>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="simjaein/ji1598"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/ji1598/2022/01/14/%ED%9A%8C%EA%B7%80%EC%A7%84%EB%8B%A8.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/ji1598/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/ji1598/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/ji1598/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/simjaein" target="_blank" title="simjaein"><svg class="svg-icon grey"><use xlink:href="/ji1598/assets/minima-social-icons.svg#github"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
