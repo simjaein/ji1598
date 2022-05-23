@@ -260,15 +260,15 @@ window.onload = wrap_img;
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Epoch 1/5
-1875/1875 [==============================] - 3s 1ms/step - loss: 1.0806 - accuracy: 0.7917
+1875/1875 [==============================] - 3s 2ms/step - loss: 1.0565 - accuracy: 0.7923
 Epoch 2/5
-1875/1875 [==============================] - 3s 1ms/step - loss: 0.4495 - accuracy: 0.8385
+1875/1875 [==============================] - 3s 1ms/step - loss: 0.4495 - accuracy: 0.8389
 Epoch 3/5
-1875/1875 [==============================] - 3s 2ms/step - loss: 0.4149 - accuracy: 0.8531
+1875/1875 [==============================] - 3s 2ms/step - loss: 0.4135 - accuracy: 0.8525
 Epoch 4/5
-1875/1875 [==============================] - 3s 2ms/step - loss: 0.3937 - accuracy: 0.8597
+1875/1875 [==============================] - 3s 2ms/step - loss: 0.4001 - accuracy: 0.8579
 Epoch 5/5
-1875/1875 [==============================] - 3s 1ms/step - loss: 0.3772 - accuracy: 0.8666
+1875/1875 [==============================] - 3s 2ms/step - loss: 0.3753 - accuracy: 0.8673
 </pre>
 </div>
 </div>
@@ -278,7 +278,7 @@ Epoch 5/5
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;keras.callbacks.History at 0x7f094c1968c0&gt;</pre>
+<pre>&lt;keras.callbacks.History at 0x7f55d055a8c0&gt;</pre>
 </div>
 
 </div>
@@ -309,7 +309,7 @@ Epoch 5/5
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>313/313 [==============================] - 1s 2ms/step - loss: 0.4392 - accuracy: 0.8464
+<pre>313/313 [==============================] - 1s 2ms/step - loss: 0.4420 - accuracy: 0.8570
 </pre>
 </div>
 </div>
@@ -319,7 +319,7 @@ Epoch 5/5
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[0.4392085373401642, 0.8464000225067139]</pre>
+<pre>[0.4419509172439575, 0.8569999933242798]</pre>
 </div>
 
 </div>
@@ -418,15 +418,15 @@ _________________________________________________________________
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Epoch 1/5
-1875/1875 [==============================] - 3s 1ms/step - loss: 0.6476 - accuracy: 0.8257
+1875/1875 [==============================] - 3s 1ms/step - loss: 0.7357 - accuracy: 0.8065
 Epoch 2/5
-1875/1875 [==============================] - 3s 2ms/step - loss: 0.3401 - accuracy: 0.8805
+1875/1875 [==============================] - 3s 2ms/step - loss: 0.3728 - accuracy: 0.8676
 Epoch 3/5
-1875/1875 [==============================] - 3s 2ms/step - loss: 0.3098 - accuracy: 0.8883
+1875/1875 [==============================] - 3s 2ms/step - loss: 0.3346 - accuracy: 0.8798
 Epoch 4/5
-1875/1875 [==============================] - 4s 2ms/step - loss: 0.2881 - accuracy: 0.8956
+1875/1875 [==============================] - 3s 1ms/step - loss: 0.3110 - accuracy: 0.8875
 Epoch 5/5
-1875/1875 [==============================] - 3s 2ms/step - loss: 0.2741 - accuracy: 0.9002
+1875/1875 [==============================] - 4s 2ms/step - loss: 0.2929 - accuracy: 0.8925
 </pre>
 </div>
 </div>
@@ -436,7 +436,7 @@ Epoch 5/5
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;keras.callbacks.History at 0x7f0940280af0&gt;</pre>
+<pre>&lt;keras.callbacks.History at 0x7f55d055be50&gt;</pre>
 </div>
 
 </div>
@@ -467,7 +467,7 @@ Epoch 5/5
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>313/313 [==============================] - 1s 2ms/step - loss: 0.3307 - accuracy: 0.8845
+<pre>313/313 [==============================] - 1s 1ms/step - loss: 0.3280 - accuracy: 0.8807
 </pre>
 </div>
 </div>
@@ -477,7 +477,7 @@ Epoch 5/5
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[0.3307149410247803, 0.8845000267028809]</pre>
+<pre>[0.32795271277427673, 0.8806999921798706]</pre>
 </div>
 
 </div>
@@ -1376,9 +1376,9 @@ array([[[ 0.,  1.,  2.,  3.],
 
 <div class="output_text output_subarea output_execute_result">
 <pre>&lt;tf.Tensor: shape=(1, 3, 3), dtype=float32, numpy=
-array([[[-0.39907938, -0.28395808, -0.16883677],
-        [ 0.06140631,  0.17652786,  0.29164892],
-        [ 0.52189153,  0.6370131 ,  0.7521346 ]]], dtype=float32)&gt;</pre>
+array([[[-2.8128474, -3.2847993, -3.756751 ],
+        [-4.7006545, -5.172607 , -5.6445584],
+        [-6.588462 , -7.060414 , -7.532366 ]]], dtype=float32)&gt;</pre>
 </div>
 
 </div>
@@ -2111,7 +2111,7 @@ array([[[-0.6065799 , -0.69143724, -1.1179221 ],
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;tf.Variable &#39;conv2d_5/kernel:0&#39; shape=(3, 3, 1, 1) dtype=float32, numpy=
+<pre>&lt;tf.Variable &#39;conv2d_6/kernel:0&#39; shape=(3, 3, 1, 1) dtype=float32, numpy=
 array([[[[-0.3444655 ]],
 
         [[ 0.4521824 ]],
@@ -2445,7 +2445,7 @@ tf.Tensor(
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;tf.Variable &#39;conv2d_7/kernel:0&#39; shape=(2, 2, 1, 4) dtype=float32, numpy=
+<pre>&lt;tf.Variable &#39;conv2d_8/kernel:0&#39; shape=(2, 2, 1, 4) dtype=float32, numpy=
 array([[[[-0.08230966, -0.15132892, -0.12760344, -0.38952267]],
 
         [[-0.36398047,  0.07347518, -0.08780673,  0.46633136]]],
@@ -2658,7 +2658,7 @@ array([[[[ 0.09046876, -0.6207628 , -0.25241536, -0.7710641 ]]]],
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;tf.Variable &#39;conv2d_8/kernel:0&#39; shape=(2, 2, 1, 4) dtype=float32, numpy=
+<pre>&lt;tf.Variable &#39;conv2d_9/kernel:0&#39; shape=(2, 2, 1, 4) dtype=float32, numpy=
 array([[[[-0.08230966, -0.15132892, -0.12760344, -0.38952267]],
 
         [[-0.36398047,  0.07347518, -0.08780673,  0.46633136]]],
@@ -2836,7 +2836,7 @@ array([[[[ 0.3297621, -0.4498347, -1.0487393, -1.580095 ]]]],
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;tf.Variable &#39;conv2d_9/kernel:0&#39; shape=(2, 2, 3, 4) dtype=float32, numpy=
+<pre>&lt;tf.Variable &#39;conv2d_10/kernel:0&#39; shape=(2, 2, 3, 4) dtype=float32, numpy=
 array([[[[-0.06956434, -0.12789628, -0.10784459, -0.32920673],
          [-0.30761963,  0.06209785, -0.07421023,  0.3941219 ],
          [ 0.16699678, -0.38913035, -0.13020593, -0.29443866]],
@@ -3112,11 +3112,11 @@ array([[[0., 0., 0., 1., 1., 1.],
 
 <div class="output_text output_subarea output_execute_result">
 <pre>&lt;tf.Tensor: shape=(1, 5, 5), dtype=float32, numpy=
-array([[[0.       , 0.       , 0.1567564, 0.9080937, 0.9080937],
-        [0.       , 0.       , 0.1567564, 0.9080937, 0.9080937],
-        [0.       , 0.       , 0.1567564, 0.9080937, 0.9080937],
-        [0.       , 0.       , 0.1567564, 0.9080937, 0.9080937],
-        [0.       , 0.       , 0.1567564, 0.9080937, 0.9080937]]],
+array([[[0.       , 0.       , 1.4988861, 1.336632 , 1.336632 ],
+        [0.       , 0.       , 1.4988861, 1.336632 , 1.336632 ],
+        [0.       , 0.       , 1.4988861, 1.336632 , 1.336632 ],
+        [0.       , 0.       , 1.4988861, 1.336632 , 1.336632 ],
+        [0.       , 0.       , 1.4988861, 1.336632 , 1.336632 ]]],
       dtype=float32)&gt;</pre>
 </div>
 
@@ -3151,14 +3151,14 @@ array([[[0.       , 0.       , 0.1567564, 0.9080937, 0.9080937],
 
 <div class="output_text output_subarea output_execute_result">
 <pre>&lt;tf.Variable &#39;conv2d_11/kernel:0&#39; shape=(2, 2, 1, 1) dtype=float32, numpy=
-array([[[[ 0.4240592 ]],
+array([[[[-0.51669824]],
 
-        [[-0.19977945]]],
+        [[ 0.6782736 ]]],
 
 
-       [[[ 0.32727808]],
+       [[[ 0.3544441 ]],
 
-        [[ 0.35653585]]]], dtype=float32)&gt;</pre>
+        [[ 0.8206125 ]]]], dtype=float32)&gt;</pre>
 </div>
 
 </div>

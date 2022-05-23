@@ -215,6 +215,14 @@ window.onload = wrap_img;
 
 </div>
 
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>2022-05-23 15:02:33.756672: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:939] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -814,7 +822,7 @@ File <span class="ansi-green-fg">~/anaconda3/envs/py310/lib/python3.10/site-pack
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;graphviz.sources.Source at 0x7f97898c59f0&gt;</pre>
+<pre>&lt;graphviz.sources.Source at 0x7efdfdb1dbd0&gt;</pre>
 </div>
 
 </div>
@@ -850,15 +858,15 @@ File <span class="ansi-green-fg">~/anaconda3/envs/py310/lib/python3.10/site-pack
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Epoch 1/5
-1875/1875 [==============================] - 2s 1ms/step - loss: 2.4154 - accuracy: 0.3651
+1875/1875 [==============================] - 2s 972us/step - loss: 2.5908 - accuracy: 0.4238
 Epoch 2/5
-1875/1875 [==============================] - 2s 1ms/step - loss: 1.3206 - accuracy: 0.4512
+1875/1875 [==============================] - 2s 983us/step - loss: 1.0855 - accuracy: 0.5799
 Epoch 3/5
-1875/1875 [==============================] - 2s 934us/step - loss: 1.2470 - accuracy: 0.4727
+1875/1875 [==============================] - 2s 1ms/step - loss: 0.9115 - accuracy: 0.6509
 Epoch 4/5
-1875/1875 [==============================] - 2s 1ms/step - loss: 1.1844 - accuracy: 0.4924
+1875/1875 [==============================] - 2s 930us/step - loss: 0.7500 - accuracy: 0.7206
 Epoch 5/5
-1875/1875 [==============================] - 2s 1ms/step - loss: 1.1297 - accuracy: 0.5202
+1875/1875 [==============================] - 2s 946us/step - loss: 0.7011 - accuracy: 0.7351
 </pre>
 </div>
 </div>
@@ -868,7 +876,7 @@ Epoch 5/5
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;keras.callbacks.History at 0x7f978072f4c0&gt;</pre>
+<pre>&lt;keras.callbacks.History at 0x7efdf1cafcd0&gt;</pre>
 </div>
 
 </div>
@@ -899,7 +907,7 @@ Epoch 5/5
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>313/313 [==============================] - 0s 1ms/step - loss: 1.0913 - accuracy: 0.5519
+<pre>313/313 [==============================] - 0s 1ms/step - loss: 0.8616 - accuracy: 0.6925
 </pre>
 </div>
 </div>
@@ -909,7 +917,7 @@ Epoch 5/5
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[1.091315507888794, 0.5519000291824341]</pre>
+<pre>[0.8615812659263611, 0.6924999952316284]</pre>
 </div>
 
 </div>
@@ -1224,7 +1232,7 @@ File <span class="ansi-green-fg">~/anaconda3/envs/py310/lib/python3.10/site-pack
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;graphviz.sources.Source at 0x7f971c214700&gt;</pre>
+<pre>&lt;graphviz.sources.Source at 0x7efdf0043dc0&gt;</pre>
 </div>
 
 </div>
@@ -1261,15 +1269,15 @@ File <span class="ansi-green-fg">~/anaconda3/envs/py310/lib/python3.10/site-pack
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Epoch 1/5
-1875/1875 [==============================] - 2s 1ms/step - loss: 2.0255 - accuracy: 0.7538
+1875/1875 [==============================] - 3s 1ms/step - loss: 2.1336 - accuracy: 0.7445
 Epoch 2/5
-1875/1875 [==============================] - 4s 2ms/step - loss: 0.6329 - accuracy: 0.7941
+1875/1875 [==============================] - 3s 1ms/step - loss: 0.6902 - accuracy: 0.7739
 Epoch 3/5
-1875/1875 [==============================] - 3s 1ms/step - loss: 0.5150 - accuracy: 0.8199
+1875/1875 [==============================] - 3s 2ms/step - loss: 0.5551 - accuracy: 0.8127
 Epoch 4/5
-1875/1875 [==============================] - 2s 1ms/step - loss: 0.4594 - accuracy: 0.8374
+1875/1875 [==============================] - 2s 1ms/step - loss: 0.4745 - accuracy: 0.8339
 Epoch 5/5
-1875/1875 [==============================] - 2s 1ms/step - loss: 0.4325 - accuracy: 0.8447
+1875/1875 [==============================] - 2s 1ms/step - loss: 0.4505 - accuracy: 0.8405
 </pre>
 </div>
 </div>
@@ -1279,7 +1287,7 @@ Epoch 5/5
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;keras.callbacks.History at 0x7f9714702530&gt;</pre>
+<pre>&lt;keras.callbacks.History at 0x7efd8c27d210&gt;</pre>
 </div>
 
 </div>
@@ -1310,7 +1318,7 @@ Epoch 5/5
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>313/313 [==============================] - 0s 1ms/step - loss: 0.5472 - accuracy: 0.8165
+<pre>313/313 [==============================] - 1s 1ms/step - loss: 0.4442 - accuracy: 0.8425
 </pre>
 </div>
 </div>
@@ -1320,7 +1328,7 @@ Epoch 5/5
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[0.5471771359443665, 0.8165000081062317]</pre>
+<pre>[0.4442218244075775, 0.8424999713897705]</pre>
 </div>
 
 </div>
@@ -1910,15 +1918,15 @@ _________________________________________________________________
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Epoch 1/5
-1875/1875 [==============================] - 3s 2ms/step - loss: 2.1238 - accuracy: 0.7462 - recall: 0.7006
+1875/1875 [==============================] - 4s 2ms/step - loss: 2.1982 - accuracy: 0.7396 - recall: 0.7006
 Epoch 2/5
-1875/1875 [==============================] - 4s 2ms/step - loss: 0.6998 - accuracy: 0.7738 - recall: 0.7065
+1875/1875 [==============================] - 5s 2ms/step - loss: 0.6612 - accuracy: 0.7814 - recall: 0.7237
 Epoch 3/5
-1875/1875 [==============================] - 3s 2ms/step - loss: 0.6084 - accuracy: 0.7931 - recall: 0.7296
+1875/1875 [==============================] - 5s 2ms/step - loss: 0.5543 - accuracy: 0.8109 - recall: 0.7559
 Epoch 4/5
-1875/1875 [==============================] - 5s 2ms/step - loss: 0.5079 - accuracy: 0.8280 - recall: 0.7898
+1875/1875 [==============================] - 3s 2ms/step - loss: 0.4823 - accuracy: 0.8318 - recall: 0.7839
 Epoch 5/5
-1875/1875 [==============================] - 4s 2ms/step - loss: 0.4638 - accuracy: 0.8411 - recall: 0.8055
+1875/1875 [==============================] - 3s 2ms/step - loss: 0.4441 - accuracy: 0.8426 - recall: 0.7980
 </pre>
 </div>
 </div>
@@ -1928,7 +1936,7 @@ Epoch 5/5
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;keras.callbacks.History at 0x7f9714639a20&gt;</pre>
+<pre>&lt;keras.callbacks.History at 0x7efd8c18bdf0&gt;</pre>
 </div>
 
 </div>
@@ -1959,7 +1967,7 @@ Epoch 5/5
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>313/313 [==============================] - 1s 2ms/step - loss: 0.5691 - accuracy: 0.7976 - recall: 0.7530
+<pre>313/313 [==============================] - 1s 2ms/step - loss: 0.4919 - accuracy: 0.8307 - recall: 0.7898
 </pre>
 </div>
 </div>
@@ -1969,7 +1977,7 @@ Epoch 5/5
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[0.5691204071044922, 0.7975999712944031, 0.753000020980835]</pre>
+<pre>[0.49188804626464844, 0.8306999802589417, 0.7897999882698059]</pre>
 </div>
 
 </div>
@@ -2013,15 +2021,15 @@ Epoch 5/5
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Epoch 1/5
-1875/1875 [==============================] - 4s 2ms/step - loss: 1.8811 - categorical_accuracy: 0.7436 - recall: 0.7012
+1875/1875 [==============================] - 4s 2ms/step - loss: 2.0967 - categorical_accuracy: 0.7334 - recall: 0.6851
 Epoch 2/5
-1875/1875 [==============================] - 4s 2ms/step - loss: 0.6453 - categorical_accuracy: 0.7926 - recall: 0.7367
+1875/1875 [==============================] - 3s 2ms/step - loss: 0.6815 - categorical_accuracy: 0.7700 - recall: 0.7007
 Epoch 3/5
-1875/1875 [==============================] - 4s 2ms/step - loss: 0.5545 - categorical_accuracy: 0.8137 - recall: 0.7604
+1875/1875 [==============================] - 4s 2ms/step - loss: 0.5806 - categorical_accuracy: 0.8023 - recall: 0.7419
 Epoch 4/5
-1875/1875 [==============================] - 4s 2ms/step - loss: 0.4804 - categorical_accuracy: 0.8328 - recall: 0.7870
+1875/1875 [==============================] - 5s 3ms/step - loss: 0.4913 - categorical_accuracy: 0.8245 - recall: 0.7784
 Epoch 5/5
-1875/1875 [==============================] - 4s 2ms/step - loss: 0.4428 - categorical_accuracy: 0.8450 - recall: 0.8040
+1875/1875 [==============================] - 3s 2ms/step - loss: 0.4579 - categorical_accuracy: 0.8375 - recall: 0.7947
 </pre>
 </div>
 </div>
@@ -2031,7 +2039,7 @@ Epoch 5/5
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;keras.callbacks.History at 0x7f978138ac20&gt;</pre>
+<pre>&lt;keras.callbacks.History at 0x7efdf2911b40&gt;</pre>
 </div>
 
 </div>
@@ -2062,7 +2070,7 @@ Epoch 5/5
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>313/313 [==============================] - 1s 1ms/step - loss: 0.6017 - categorical_accuracy: 0.7994 - recall: 0.7783
+<pre>313/313 [==============================] - 1s 1ms/step - loss: 0.5067 - categorical_accuracy: 0.8273 - recall: 0.7802
 </pre>
 </div>
 </div>
@@ -2072,7 +2080,7 @@ Epoch 5/5
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[0.6017408967018127, 0.7993999719619751, 0.7782999873161316]</pre>
+<pre>[0.5067203044891357, 0.8273000121116638, 0.7802000045776367]</pre>
 </div>
 
 </div>
@@ -2285,15 +2293,15 @@ Epoch 5/5
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Epoch 1/5
-1875/1875 [==============================] - 4s 2ms/step - loss: 2.0718 - categorical_accuracy: 0.7478 - recall_1: 0.7077
+1875/1875 [==============================] - 4s 2ms/step - loss: 2.0587 - categorical_accuracy: 0.7566 - recall_1: 0.7263
 Epoch 2/5
-1875/1875 [==============================] - 3s 2ms/step - loss: 0.6402 - categorical_accuracy: 0.7875 - recall_1: 0.7230
+1875/1875 [==============================] - 4s 2ms/step - loss: 0.6286 - categorical_accuracy: 0.7935 - recall_1: 0.7429
 Epoch 3/5
-1875/1875 [==============================] - 4s 2ms/step - loss: 0.5342 - categorical_accuracy: 0.8199 - recall_1: 0.7692
+1875/1875 [==============================] - 4s 2ms/step - loss: 0.5358 - categorical_accuracy: 0.8181 - recall_1: 0.7689
 Epoch 4/5
-1875/1875 [==============================] - 4s 2ms/step - loss: 0.4816 - categorical_accuracy: 0.8356 - recall_1: 0.7991
+1875/1875 [==============================] - 5s 3ms/step - loss: 0.4679 - categorical_accuracy: 0.8367 - recall_1: 0.7949
 Epoch 5/5
-1875/1875 [==============================] - 4s 2ms/step - loss: 0.4538 - categorical_accuracy: 0.8433 - recall_1: 0.8068
+1875/1875 [==============================] - 6s 3ms/step - loss: 0.4414 - categorical_accuracy: 0.8422 - recall_1: 0.8032
 </pre>
 </div>
 </div>
@@ -2303,7 +2311,7 @@ Epoch 5/5
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;keras.callbacks.History at 0x7f978116ff10&gt;</pre>
+<pre>&lt;keras.callbacks.History at 0x7efdf26dbcd0&gt;</pre>
 </div>
 
 </div>
@@ -2336,10 +2344,10 @@ Epoch 5/5
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&lt;keras.layers.core.flatten.Flatten at 0x7f97812f4730&gt;,
- &lt;keras.layers.core.dense.Dense at 0x7f971464d450&gt;,
- &lt;keras.layers.core.dense.Dense at 0x7f97812a0e50&gt;,
- &lt;keras.layers.core.dense.Dense at 0x7f9781337400&gt;]</pre>
+<pre>[&lt;keras.layers.core.flatten.Flatten at 0x7efdf28b1a80&gt;,
+ &lt;keras.layers.core.dense.Dense at 0x7efdf2a9c1f0&gt;,
+ &lt;keras.layers.core.dense.Dense at 0x7efdf28b25c0&gt;,
+ &lt;keras.layers.core.dense.Dense at 0x7efdf28b2830&gt;]</pre>
 </div>
 
 </div>
@@ -2424,25 +2432,25 @@ Epoch 5/5
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Epoch 1/10
-1875/1875 [==============================] - 5s 2ms/step - loss: 1.1069 - accuracy: 0.7879
+1875/1875 [==============================] - 3s 1ms/step - loss: 1.1107 - accuracy: 0.7893
 Epoch 2/10
-1875/1875 [==============================] - 3s 1ms/step - loss: 0.4523 - accuracy: 0.8392
+1875/1875 [==============================] - 3s 2ms/step - loss: 0.4604 - accuracy: 0.8360
 Epoch 3/10
-1875/1875 [==============================] - 3s 1ms/step - loss: 0.4071 - accuracy: 0.8556
+1875/1875 [==============================] - 4s 2ms/step - loss: 0.4147 - accuracy: 0.8522
 Epoch 4/10
-1875/1875 [==============================] - 3s 1ms/step - loss: 0.3891 - accuracy: 0.8619
+1875/1875 [==============================] - 4s 2ms/step - loss: 0.3931 - accuracy: 0.8605
 Epoch 5/10
-1875/1875 [==============================] - 3s 2ms/step - loss: 0.3730 - accuracy: 0.8694
+1875/1875 [==============================] - 4s 2ms/step - loss: 0.3743 - accuracy: 0.8678
 Epoch 6/10
-1875/1875 [==============================] - 4s 2ms/step - loss: 0.3542 - accuracy: 0.8750
+1875/1875 [==============================] - 2s 1ms/step - loss: 0.3645 - accuracy: 0.8696
 Epoch 7/10
-1875/1875 [==============================] - 3s 2ms/step - loss: 0.3444 - accuracy: 0.8784
+1875/1875 [==============================] - 3s 2ms/step - loss: 0.3448 - accuracy: 0.8782
 Epoch 8/10
-1875/1875 [==============================] - 4s 2ms/step - loss: 0.3334 - accuracy: 0.8809
+1875/1875 [==============================] - 4s 2ms/step - loss: 0.3394 - accuracy: 0.8787
 Epoch 9/10
-1875/1875 [==============================] - 3s 2ms/step - loss: 0.3285 - accuracy: 0.8827
+1875/1875 [==============================] - 3s 2ms/step - loss: 0.3352 - accuracy: 0.8789
 Epoch 10/10
-1875/1875 [==============================] - 3s 1ms/step - loss: 0.3114 - accuracy: 0.8878
+1875/1875 [==============================] - 4s 2ms/step - loss: 0.3238 - accuracy: 0.8845
 </pre>
 </div>
 </div>
@@ -2452,7 +2460,7 @@ Epoch 10/10
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;keras.callbacks.History at 0x7f9714700af0&gt;</pre>
+<pre>&lt;keras.callbacks.History at 0x7efdf012f130&gt;</pre>
 </div>
 
 </div>
@@ -2483,7 +2491,7 @@ Epoch 10/10
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>313/313 [==============================] - 0s 1ms/step - loss: 0.4025 - accuracy: 0.8669
+<pre>313/313 [==============================] - 1s 2ms/step - loss: 0.4113 - accuracy: 0.8583
 </pre>
 </div>
 </div>
@@ -2493,7 +2501,7 @@ Epoch 10/10
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[0.4024653732776642, 0.8669000267982483]</pre>
+<pre>[0.4112727642059326, 0.858299970626831]</pre>
 </div>
 
 </div>
